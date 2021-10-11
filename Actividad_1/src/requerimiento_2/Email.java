@@ -2,7 +2,7 @@ package requerimiento_2;
 
 public class Email {
 	
-	private static int contador=0001;
+	private static int acumulador=0001;
 	private int id;
 	private String destinatario;
 	private String remitente;
@@ -11,14 +11,14 @@ public class Email {
 	
 	//Constructores
 	public Email() {
-		this.id=this.contador++;
+		this.id=this.acumulador++;
 	}	
 	public  Email(String destinatario,String remitente,String asunto,String mensaje) {
 		this.destinatario=destinatario;
 		this.remitente=remitente;
 		this.asunto=asunto;
 		this.mensaje=mensaje;		
-		this.id=this.contador++;
+		this.id=this.acumulador++;
 	}
 	
 	// Getters and setters
@@ -56,6 +56,13 @@ public class Email {
 	
 	public void setMensaje(String mensaje) {
 		this.mensaje = mensaje;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Email [id=" + id + ", destinatario=" + destinatario + ", remitente=" + remitente + ", asunto=" + asunto
+				+ ", mensaje=" + mensaje + "]";
 	}
 
 }

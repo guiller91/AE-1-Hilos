@@ -22,12 +22,16 @@ public class Buffer {
 			}
 		}
 		
-		// Añadimos un mail a la cola.
-		cola.offer(mail);
 		
-		// Despertamos a los hilos que esten en wait.
+		
+		try {
+			cola.offer(mail);
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		notify();
-		
 	}
 	
 	public synchronized Email getEmail() {
@@ -43,7 +47,12 @@ public class Buffer {
 		
 		email = cola.poll();
 		notify();
+		
 		return email;
 	}
+	public boolean isEmpty() {
+		return cola.isEmpty();
+	}
+	
 
 }
