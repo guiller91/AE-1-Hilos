@@ -6,20 +6,22 @@ public class Productor extends Thread {
 	
 	public String nombre;
 	public Buffer cola;
-	public Email mail;
+	public Email mail[];
 	
-	public Productor(String nombre, Buffer cola,Email mail) {
+	
+	public Productor(String nombre, Buffer cola, Email[] mail) {
 		super();
 		this.nombre = nombre;
 		this.cola = cola;
 		this.mail = mail;
 	}
-	
+
+
 	public void run() {
 		
-		for(int i = 1; i <= 10; i++) {
-			System.out.println("El "+ nombre + " ha cargado en el buffer el email con id: "+mail.getId());
-			cola.addEmail(mail);
+		for(int i = 1; i <= mail.length; i++) {
+			System.out.println("El "+ nombre + " ha cargado en el buffer el email con id: "+mail[i].getId());
+			cola.addEmail(mail[i]);
 		}
 		
 	}
