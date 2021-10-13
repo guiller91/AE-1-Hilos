@@ -14,9 +14,8 @@ public class Consumidor extends Thread {
 	}
 
 	public void run() {
-		
-		do {
-			
+		// Hará una vez minimo lo que se le manda y despues comprobara si la cola esta vacia.
+		do {			
 			mail = cola.getEmail();
 			System.out.println("el " + nombre + " ha consumido el siguiente " + mail.toString());
 		} while (cola.isEmpty() == false);
