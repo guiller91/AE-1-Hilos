@@ -11,7 +11,7 @@ public class PrimeChecker extends Thread {
 		this.numero = numero;
 	}
 
-	@Override
+	
 	public void run() {
 		System.out.println("Se esta iniciando el hilo: " + Thread.currentThread().getName());
 		try {
@@ -22,6 +22,7 @@ public class PrimeChecker extends Thread {
 		}
 		
 		// iniciamos una variable para saber los nano segundos
+		// lo coloco aqui para que cuente realmente cuanto tarda el hilo en procesar el problema
 		inicio = System.nanoTime();
 		//Nos dira el hilo  actual y si es primo o no.
 		System.out.println("El hilo : " + Thread.currentThread().getName() + " determina que " + primeNumber(numero));
