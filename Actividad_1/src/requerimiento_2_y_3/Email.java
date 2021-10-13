@@ -10,6 +10,7 @@ public class Email {
 	private String mensaje;
 
 	// Constructor
+	// aprovecharemos el acumulador, para dar a cada Email creado, un id único
 	public Email(String destinatario, String remitente, String asunto, String mensaje) {
 		this.destinatario = destinatario;
 		this.remitente = remitente;
