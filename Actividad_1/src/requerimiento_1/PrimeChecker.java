@@ -11,7 +11,7 @@ public class PrimeChecker extends Thread {
 		this.numero = numero;
 	}
 
-	@Override
+	
 	public void run() {
 		System.out.println("Se esta iniciando el hilo: " + Thread.currentThread().getName());
 		try {
@@ -28,8 +28,8 @@ public class PrimeChecker extends Thread {
 		// iniciamos otra variable que nos dira en que nano segundo estamos y nos la restara de la variable inicio para saber lo que tarda.
 		fin = System.nanoTime();
 		tiempo = fin - inicio;
-		// tiempo que tarda en hilo en hacer la operación
-		System.out.println("El "+ Thread.currentThread().getName() + " ha tardado en procesar la información " + tiempo + " nano segundos");
+		// tiempo que tarda en hilo en hacer la operaciÃ³n
+		System.out.println("El "+ Thread.currentThread().getName() + " ha tardado en procesar la informaciÃ³n " + tiempo + " nano segundos");
 	}
 
 	public static String primeNumber(int num) {
@@ -41,8 +41,8 @@ public class PrimeChecker extends Thread {
 			}
 		}
 		if (prime)
-			return "El número " + num + " es primo.";
+			return "El nÃºmero " + num + " es primo.";
 		else
-			return "El número " + num + " no es primo.";
+			return "El nÃºmero " + num + " no es primo.";
 	}
 }
