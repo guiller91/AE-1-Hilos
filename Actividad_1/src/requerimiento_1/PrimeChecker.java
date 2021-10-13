@@ -22,7 +22,7 @@ public class PrimeChecker extends Thread {
 		fin = System.currentTimeMillis();
 		tiempo = (fin - inicio)/1000;
 		// tiempo que tarda en hilo en hacer la operación
-		System.out.println("El "+ Thread.currentThread().getName() + " ha tardado en procesar la informacion " + tiempo + " nano segundos");
+		System.out.println("El "+ Thread.currentThread().getName() + " ha tardado en procesar la informacion " + tiempo + " segundos");
 	}
 
 	public static String primeNumber(long num) {
