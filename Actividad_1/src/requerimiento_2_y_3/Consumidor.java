@@ -16,8 +16,9 @@ public class Consumidor extends Thread {
 	public void run() {
 		
 		do {
+			
 			mail = cola.getEmail();
-			System.out.println("el " + nombre + " ha consumido el siguiente " + mail.toString());						
+			System.out.println("el " + nombre + " ha consumido el siguiente " + mail.toString());
 		} while (cola.isEmpty() == false);
 
 	}

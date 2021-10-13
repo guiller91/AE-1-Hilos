@@ -6,13 +6,15 @@ public class Main {
 	public static void main(String[] args) {
 
 		Scanner lector = new Scanner(System.in);
-		int numeros[] = new int[4];
-
+		long numeros[] = new long[4];
+		
+		
 		// rellenamos el array con los numeros que queramos comprobar
+		// numeros primos altos: 903020309 - 3790302030973
 		for (int i = 0; i < numeros.length; i++) {
 			int contador = 4 - i;
 			System.out.println("introduzca un numero. Le queda " + contador + " opciones\n");
-			numeros[i] = lector.nextInt();
+			numeros[i] = lector.nextLong();
 		}
 		
 		lector.close();
