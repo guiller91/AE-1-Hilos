@@ -18,7 +18,7 @@ public class PrimeChecker extends Thread {
 		inicio = System.currentTimeMillis();
 		//Nos dira el hilo  actual y si es primo o no.
 		System.out.println("El hilo : " + Thread.currentThread().getName() + " determina que " + primeNumber(numero));
-		// iniciamos otra variable que nos dira en que nano segundo estamos y nos la restara de la variable inicio para saber lo que tarda.
+		// iniciamos otra variable que nos dira en que mili segundo estamos y nos la restara de la variable inicio para saber lo que tarda.
 		fin = System.currentTimeMillis();
 		tiempo = (fin - inicio)/1000;
 		// tiempo que tarda en hilo en hacer la operación
